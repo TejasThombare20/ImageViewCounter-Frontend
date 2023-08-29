@@ -81,7 +81,7 @@ const Login = () => {
       if (json.success) {
         localStorage.setItem("token", json.authtoken);
         fetchUserData();
-        toast("Successfully logged in");
+         toast.success("successfully logged in")
         setTimeout(() => {
           Navigate("/uploadimage");
         }, 1000);
