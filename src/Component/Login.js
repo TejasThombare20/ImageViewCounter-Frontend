@@ -83,7 +83,7 @@ const Login = () => {
         fetchUserData();
         toast("Successfully logged in");
         setTimeout(() => {
-          Navigate("/NewProduct");
+          Navigate("/uploadimage");
         }, 1000);
       } else {
         alert("Invalid credentials");
@@ -184,7 +184,7 @@ const Login = () => {
                   <p>
                     don't have a account ?{" "}
                     <Link
-                      to="/Signup"
+                      to="/signup"
                       className="text-blue-600 hover:underline"
                     >
                       Signup

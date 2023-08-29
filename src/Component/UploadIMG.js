@@ -177,8 +177,8 @@ const UploadIMG = () => {
         <label htmlFor="image" className="mt-1 cursor-pointer">
           Image :
           <div className="h-40 w-full bg-slate-200  my-1 py-1 flex items-center justify-center">
-            {data.image ? (
-              <img src={data.image} className="h-full" alt="productImage" />
+            {image ? (
+              <img src={URL.createObjectURL(image)} className="h-full" alt="productImage" />
             ) : (
               <span className="text-5xl">
                 <FaUpload />
@@ -189,6 +189,7 @@ const UploadIMG = () => {
               type="file"
               accept="image/*"
               id="image"
+              
               onChange={(e) => {
                 console.log(e);
                 setImage(e.target.files[0]);
