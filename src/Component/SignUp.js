@@ -58,7 +58,6 @@ const SignUp = () => {
       if (password === confirmPassword) {
         try {
           const response = await axios.post(
-      toast("Product added successfully");
             `${api}/api/auth/createuser`,
             JSON.stringify({ first_name, last_name, email, password, image }),
             {
