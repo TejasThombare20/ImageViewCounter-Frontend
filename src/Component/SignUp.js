@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { imageToBase64 } from "../Utility/ImageToBase64";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-// import api from '../utils/api';
+import api from '../utils/api';
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(true);
@@ -58,7 +58,8 @@ const SignUp = () => {
       if (password === confirmPassword) {
         try {
           const response = await axios.post(
-            `http://localhost:5000/api/auth/createuser`,
+      toast("Product added successfully");
+            `${api}/api/auth/createuser`,
             JSON.stringify({ first_name, last_name, email, password, image }),
             {
               headers: {
