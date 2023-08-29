@@ -1,4 +1,4 @@
-// const api = "https://e-pasal-inventory-backend.onrender.com";
-const api = "http://localhost:5000";
-// const api = "https://e-pasal-inventory-backend.vercel.app/";
+
+// const api = "http://localhost:5000";
+const api = "https://imageviewcounter.onrender.com"
 module.exports  = api;
